@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: wooksikpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wooksikpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: wooksikpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: wooksikpipelinesjavascriptdocker 
+          image: user27acr.azurecr.io/wooksikpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
